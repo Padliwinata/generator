@@ -23,7 +23,7 @@ left.write("Isi datanya:")
 jenis = left.selectbox(
     "Matkul",
     ["ALPRO", "STD", "PBO", "SISTER", "SISOP",
-        "JARKOM", "BASDAT", "ABP", "KPL", "PPB", "PPL"],
+        "WEBPRO", "JARKOM", "PPL"],
     index=0,
 )
 
