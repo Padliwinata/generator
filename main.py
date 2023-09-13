@@ -57,6 +57,9 @@ elif jenis == "KPL":
 elif jenis == "PPB":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1671897911")
+elif jenis == "PPL":
+    df = load_data(
+        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=395869743")
 
 if df.empty:
     right.write("Data kosong")
