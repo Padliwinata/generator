@@ -60,6 +60,9 @@ elif jenis == "PPB":
 elif jenis == "PPL":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=395869743")
+elif jenis == "WEBPRO":
+    df = load_data(
+        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=2084916089")
 
 if df.empty:
     right.write("Data kosong")
