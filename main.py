@@ -57,9 +57,9 @@ elif jenis == "KPL":
 elif jenis == "PPB":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1671897911")
-elif jenis == "PPL":
+elif jenis == "KPL":
     df = load_data(
-        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=395869743")
+        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit?pli=1#gid=955695029")
 elif jenis == "WEBPRO":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=2084916089")
