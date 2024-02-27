@@ -105,7 +105,7 @@ else:
     res = [eval(i) for i in get_selected_checkboxes()]
     for x in range(1, 51):
         if (x in res):
-            NIMhapus.append(int(df_kelas["NIM"][x-1]))
+            NIMhapus.append(df_kelas["NIM"][x-1])
 
     def highlight(x): return ['background: red'
                               if x.name in d
@@ -143,7 +143,7 @@ else:
     df_acak = st.session_state["{}".format(kelas)]
     for i in NIMhapus:
         df_acak = df_acak.drop(
-            df_acak.index[(df_acak["NIM"] == int(i))], axis=0)
+            df_acak.index[(df_acak["NIM"] == i)], axis=0)
     df_acak = df_acak.reset_index(drop=True)
 
     i = 0
