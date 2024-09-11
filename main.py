@@ -11,7 +11,7 @@ def load_data(sheets_url):
 
 st.set_page_config(layout="wide", page_icon="🪑",
                    page_title="Generator")
-st.title("🪑 Generator")
+st.title("🪑 Generator Ganjil 24/25")
 right = st
 left = st.sidebar
 
@@ -22,20 +22,29 @@ left.write("Isi datanya:")
 
 jenis = left.selectbox(
     "Matkul",
-    ["ALPRO", "STD", "PBO", "SISTER", "SISOP",
-        "WEBPRO", "JARKOM", "KPL", "PPB", "BASDAT"],
+    ["ALPRO SE", "STD", "ALPRO IF", "PBO", "SISOP",
+        "WEBPRO", "DPBO", "PPB"],
     index=0,
 )
 
-if jenis == "ALPRO":
+if jenis == "ALPRO SE":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1051006003")
 elif jenis == "STD":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1723414529")
+elif jenis == "ALPRO IF":
+    df = load_data(
+        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=78512067")
 elif jenis == "PBO":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=345368744")
+elif jenis == "DPBO":
+    df = load_data(
+        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=165603706")
+elif jenis == "PPB":
+    df = load_data(
+        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1671897911")
 elif jenis == "SISTER":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1636199559")
@@ -54,12 +63,6 @@ elif jenis == "ABP":
 elif jenis == "KPL":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=955695029")
-elif jenis == "PPB":
-    df = load_data(
-        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1671897911")
-elif jenis == "KPL":
-    df = load_data(
-        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit?pli=1#gid=955695029")
 elif jenis == "WEBPRO":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=2084916089")
@@ -79,7 +82,7 @@ else:
             option = columns[i].checkbox(str(10 * i + j + 1))
             options.append(option)
 
-    left.write('Pilih NIM yang tidak akan digunakan:')
+    left.write('Pilih Nama yang tidak akan digunakan:')
     df_kelas = df[df["Kelas"] == kelas].reset_index(drop=True)
     k = 1
     A1, B1 = left.columns(2)
