@@ -82,7 +82,7 @@ else:
                 st.success("Kode benar!")
                 cek_caslab = True
     
-    elif jenis != "CASLAB_PRAMAGANG_2526" or cek_caslab == True:
+    if jenis != "CASLAB_PRAMAGANG_2526" or cek_caslab == True:
         kelas = left.selectbox(
             "Kelas",
             (df["Kelas"].drop_duplicates())
