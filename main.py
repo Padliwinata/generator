@@ -73,16 +73,19 @@ elif jenis == "CASLAB_PRAMAGANG_2526":
 if df.empty:
     right.write("Data kosong")
 else:
+    if "cek_caslab" not in st.session_state:
+        st.session_state["cek_caslab"] = False
+
     cek_caslab = False
-    if jenis == "CASLAB_PRAMAGANG_2526":
+    if jenis == "CASLAB_PRAMAGANG_2526" and not st.session_state["cek_caslab"]:
         user_input = st.text_input("Kode Program", type="password")
 
         if st.button("Submit"):
             if user_input == "caslabjaya2526":
                 st.success("Kode benar!")
-                cek_caslab = True
+                st.session_state["cek_caslab"] = True
     
-    if jenis != "CASLAB_PRAMAGANG_2526" or cek_caslab == True:
+    if jenis != "CASLAB_PRAMAGANG_2526" or st.session_state["cek_caslab"]:
         kelas = left.selectbox(
             "Kelas",
             (df["Kelas"].drop_duplicates())
