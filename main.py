@@ -66,6 +66,9 @@ elif jenis == "KPL":
 elif jenis == "WEBPRO":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=2084916089")
+elif jenis == "CASLAB_PRAMAGANG_2526":
+    df = load_data(
+        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1398007307")
 
 if df.empty:
     right.write("Data kosong")
