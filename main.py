@@ -11,7 +11,7 @@ def load_data(sheets_url):
 
 st.set_page_config(layout="wide", page_icon="🪑",
                    page_title="Generator")
-st.title("🪑 Generator Ganjil 24/25")
+st.title("🪑 Generator Genap 24/25")
 right = st
 left = st.sidebar
 
@@ -22,18 +22,18 @@ left.write("Isi datanya:")
 
 jenis = left.selectbox(
     "Matkul",
-    ["ALPRO SE", "STD", "ALPRO IF", "PBO", "SISOP",
-        "WEBPRO", "DPBO", "PPB", "CASLAB_PRAMAGANG_2526"],
+    ["ALPRO2", "STD", "JARKOM", "SISOP", "PBO", "DKA", "BASDAT",
+        "DPBO", "KPL", "ADPL", "PPL", "CASLAB_PRAMAGANG_2526"],
     index=0,
 )
 
-if jenis == "ALPRO SE":
+if jenis == "ALPRO2":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1051006003")
 elif jenis == "STD":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1723414529")
-elif jenis == "ALPRO IF":
+elif jenis == "DKA":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=78512067")
 elif jenis == "PBO":
@@ -42,10 +42,10 @@ elif jenis == "PBO":
 elif jenis == "DPBO":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=165603706")
-elif jenis == "PPB":
+elif jenis == "ADPL":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1671897911")
-elif jenis == "SISTER":
+elif jenis == "PPL":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1636199559")
 elif jenis == "SISOP":
