@@ -23,7 +23,7 @@ left.write("Isi datanya:")
 jenis = left.selectbox(
     "Matkul",
     ["ALPRO2", "STD", "JARKOM", "SISOP", "PBO", "DKA", "BASDAT",
-        "DPBO", "KPL", "ADPL", "PPL", "CASLAB_PRAMAGANG_2526", "KWU"],
+        "DPBO", "KPL", "ADPL", "PPL", "CASLAB_PRAMAGANG_2526"],
     index=0,
 )
 
@@ -66,9 +66,6 @@ elif jenis == "KPL":
 elif jenis == "WEBPRO":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=2084916089")
-elif jenis == "KWU":
-    df = load_data(
-        "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=935372438")
 elif jenis == "CASLAB_PRAMAGANG_2526":
     df = load_data(
         "https://docs.google.com/spreadsheets/d/1Tu--zAiYLB4HA3dD0OmAgaa6Vbkjyn7a/edit#gid=1398007307")
